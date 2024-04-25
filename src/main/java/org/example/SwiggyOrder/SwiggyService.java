@@ -14,6 +14,7 @@ public class SwiggyService {
         Dishes dishes1 = new Dishes("Icecream");
         Dishes dishes2 = new Dishes("Cooldrinks");
         Dishes dishes3 = new Dishes("ButterNon");
+
         List<Dishes> mehfilDishesList = new ArrayList<>();
         mehfilDishesList.add(dishes);
         mehfilDishesList.add(dishes1);
@@ -21,15 +22,20 @@ public class SwiggyService {
         mehfilDishesList.add(dishes3);
         mehfilrestarunt.address = mehfilrestaurant;
         mehfilrestarunt.dishList = mehfilDishesList;
+
         Restarunt paradiserestarunt = new Restarunt();
         paradiserestarunt.restaruntName = "paradise";
         paradiserestarunt.rating = "5";
         paradiserestarunt.phoneNumber = "8686712798";
+
+
         Address paradisereatarunt = new Address("kphb", "Hyderabad", "4", "508216");
         Dishes dishes4 = new Dishes("Chapathi");
         Dishes dishes5 = new Dishes("Curries");
         Dishes dishes6 = new Dishes("Statres");
         Dishes dishes7 = new Dishes("Chicken");
+
+
         List<Dishes> paradiseDishesList = new ArrayList<>();
         paradiseDishesList.add(dishes);
         paradiseDishesList.add(dishes1);

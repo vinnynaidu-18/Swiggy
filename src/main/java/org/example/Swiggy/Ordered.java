@@ -5,6 +5,7 @@ public class Ordered {
     public int price;
     public  double serviceCharges;
     public  int tipAmt;
+
     public Address address;
 
     @Override

@@ -1,6 +1,7 @@
 package org.example.SwiggyOrder;
 
 import java.util.List;
+import java.util.Objects;
 
 public class Restarunt {
     public String restaruntName;
@@ -8,7 +9,7 @@ public class Restarunt {
     public String rating;
     public Dishes dishes;
 
-    public  Address address;
+    public Address address;
     List<Dishes> dishList;
 
     @Override
@@ -23,3 +24,4 @@ public class Restarunt {
                 '}';
     }
 }
+
