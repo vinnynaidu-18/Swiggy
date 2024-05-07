@@ -1,18 +1,27 @@
 package org.example.SwiggyApp;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 public class PaymentService {
-    public List<Payment> payments;
+    private Map<String, Payment> paymentMethods;
 
     public PaymentService() {
-        this.payments = new ArrayList<>();
+        this.paymentMethods = new HashMap<>();
+        paymentMethods.put("Phonepay", new Phonepay(10000));
+        paymentMethods.put("CreditCard", new CreditCard(25000));
+        paymentMethods.put("Cash", new Cash());
     }
 
-    public void makePayment(double amount, String paymentMethod) {
-        Payment payment = new Payment(amount, paymentMethod);
-        payments.add(payment);
-        System.out.println("Payment of Rs:" + amount + " made using " + paymentMethod);
+    public void makePayment(double amount, String paymentMethod) throws CheckedException {
+        Payment payment = paymentMethods.get(paymentMethod);
+
+        if (payment == null) {
+            System.out.println("Invalid payment method.");
+            return;
+        }
+        payment.makePayment(amount);
     }
+
 }
+
